@@ -1,0 +1,51 @@
+{
+    "name": "tepuilabs/bnc",
+    "description": "PHP package for handling payments using the payment gateway of the Venezuelan bank BNC",
+    "keywords": [
+        "TepuiLabs",
+        "bnc"
+    ],
+    "homepage": "https://github.com/tepuilabs/bnc",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Angel",
+            "email": "bullgram@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "ext-openssl": "*",
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.24.2",
+        "laravel/pint": "^1.13.5",
+        "spatie/ray": "^1.39"
+    },
+    "autoload": {
+        "psr-4": {
+            "TepuiLabs\\Bnc\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TepuiLabs\\Bnc\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
